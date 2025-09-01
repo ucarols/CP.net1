@@ -13,7 +13,7 @@ namespace MotoPatioApi.Models
         [Required]
         [Column("NOME")]
         [StringLength(100)]
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
 
         [Column("CARGO")]
         [StringLength(50)]

@@ -8,6 +8,8 @@ namespace MottuPatio.Migrations
     /// <inheritdoc />
     public partial class InitialCreate : Migration
     {
+        private const string OracleIdentitySeed = "START WITH 1 INCREMENT BY 1";
+
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +18,7 @@ namespace MottuPatio.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                        .Annotation("Oracle:Identity", OracleIdentitySeed),
                     Nome = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
                 constraints: table =>
@@ -29,7 +31,7 @@ namespace MottuPatio.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                        .Annotation("Oracle:Identity", OracleIdentitySeed),
                     MotoId = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     Hora = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     Localizacao = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
@@ -44,7 +46,7 @@ namespace MottuPatio.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                        .Annotation("Oracle:Identity", OracleIdentitySeed),
                     Placa = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     Modelo = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     DataEntrada = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
@@ -59,7 +61,7 @@ namespace MottuPatio.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                        .Annotation("Oracle:Identity", OracleIdentitySeed),
                     Localizacao = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
                 constraints: table =>
@@ -72,7 +74,7 @@ namespace MottuPatio.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
+                        .Annotation("Oracle:Identity", OracleIdentitySeed),
                     MotoId = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     Classificacao = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
