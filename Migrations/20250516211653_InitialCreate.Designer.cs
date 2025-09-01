@@ -15,6 +15,8 @@ namespace MottuPatio.Migrations
     [Migration("20250516211653_InitialCreate")]
     partial class InitialCreate
     {
+        private const string OracleNumber10 = "NUMBER(10)";
+
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,7 +31,7 @@ namespace MottuPatio.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -46,7 +48,7 @@ namespace MottuPatio.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -58,7 +60,7 @@ namespace MottuPatio.Migrations
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<int>("MotoId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     b.HasKey("Id");
 
@@ -69,7 +71,7 @@ namespace MottuPatio.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -93,7 +95,7 @@ namespace MottuPatio.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -110,7 +112,7 @@ namespace MottuPatio.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -119,7 +121,7 @@ namespace MottuPatio.Migrations
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<int>("MotoId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType(OracleNumber10);
 
                     b.HasKey("Id");
 
